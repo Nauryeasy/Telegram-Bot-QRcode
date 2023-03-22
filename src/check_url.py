@@ -34,16 +34,6 @@ def has_suspicious_js(link):
     return "eval(" in js_code or "document.location.replace(" in js_code
 
 
-def has_suspicious_js(link):
-    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-    response = requests.get(link, verify=False)
-    js_code = response.text
-    if response.status_code == 200:
-        if "eval(" in js_code or 'document.location.replace(' in js_code:
-            return True
-    return False
-
-
 def is_solution(link):
     response = requests.get(link, verify=False)
     content_type = response.headers['content-type']
@@ -94,7 +84,6 @@ def check_link(link):
         'https': is_https(link),
         'ssl': has_ssl_cert(link),
         'suspicious': is_suspicious(link),
-        'suspicious_js': has_suspicious_js(link),
         'Long level': is_long_level(link),
         'Unreadability': is_unreadable(link)
     }

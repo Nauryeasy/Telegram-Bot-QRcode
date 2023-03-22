@@ -12,7 +12,7 @@ import asyncio
 from aiogram.utils import executor
 from aiogram.types import ChatActions
 
-TOKEN = ''  # Сюда вы пишите свой токен. Узнать его можно в @BotFather
+TOKEN = '5460899081:AAHrAnMdl69oame0Ah-D7WqB139tO0g7IMI'  # Сюда вы пишите свой токен. Узнать его можно в @BotFather
 bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=MemoryStorage())
 dp.middleware.setup(LoggingMiddleware())

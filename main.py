@@ -189,7 +189,6 @@ async def solution_url(message: types.Message, state: FSMContext):
             f'|<b>----> Поддержка https:</b>          {galochka}\n' \
             f'|<b>----> SSL сертификат:</b>              {galochka if result["ssl"] == True else krestik}\n' \
             f'|<b>----> Известный домен:</b>           {krestik if result["suspicious"] == True else galochka}\n' \
-            f'|<b>----> Подозрительный JS код:</b> {krestik if result["suspicious_js"] == False else galochka}\n' \
             f'|<b>----> Доменные уровни:</b>           {krestik if result["Long level"] == True else galochka}\n' \
             f'|<b>----> Читаемый домен:</b>           {krestik if result["Unreadability"] == True else galochka}\n' \
             f'|\n' \
@@ -221,7 +220,6 @@ async def solution_url(message: types.Message, state: FSMContext):
                 f'|<b>----> Поддержка https:</b>          {galochka}\n' \
                 f'|<b>----> SSL сертификат:</b>              {galochka if result["ssl"] == True else krestik}\n' \
                 f'|<b>----> Известный домен:</b>           {krestik if result["suspicious"] == True else galochka}\n' \
-                f'|<b>----> Подозрительный JS код:</b> {krestik if result["suspicious_js"] == False else galochka}\n' \
                 f'|<b>----> Доменные уровни:</b>           {krestik if result["Long level"] == True else galochka}\n' \
                 f'|<b>----> Читаемый домен:</b>           {krestik if result["Unreadability"] == True else galochka}\n' \
                 f'|\n' \
@@ -279,7 +277,6 @@ async def solution_QRcode(message: types.Message, state: FSMContext):
                 f'|<b>----> Поддержка https:</b>          {galochka}\n' \
                 f'|<b>----> SSL сертификат:</b>              {galochka if result["ssl"] == True else krestik}\n' \
                 f'|<b>----> Известный домен:</b>           {krestik if result["suspicious"] == True else galochka}\n' \
-                f'|<b>----> Подозрительный JS код:</b> {krestik if result["suspicious_js"] == False else galochka}\n' \
                 f'|<b>----> Доменные уровни:</b>           {krestik if result["Long level"] == True else galochka}\n' \
                 f'|<b>----> Читаемый домен:</b>           {krestik if result["Unreadability"] == True else galochka}\n' \
                 f'|\n' \
@@ -308,7 +305,6 @@ async def solution_QRcode(message: types.Message, state: FSMContext):
                     f'|<b>----> Поддержка https:</b>          {galochka}\n' \
                     f'|<b>----> SSL сертификат:</b>              {galochka if result["ssl"] == True else krestik}\n' \
                     f'|<b>----> Известный домен:</b>           {krestik if result["suspicious"] == True else galochka}\n' \
-                    f'|<b>----> Подозрительный JS код:</b> {krestik if result["suspicious_js"] == True else galochka}\n' \
                     f'|<b>----> Доменные уровни:</b>           {krestik if result["Long level"] == True else galochka}\n' \
                     f'|<b>----> Читаемый домен:</b>           {krestik if result["Unreadability"] == True else galochka}\n' \
                     f'|\n' \
